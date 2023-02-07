@@ -2,7 +2,7 @@ package org.example;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
-class calc {
+class Calc {
     int a;
     int b;
     public void sett(int a,int b)
@@ -18,36 +18,40 @@ class calc {
     {
         return b;
     }
-    public int cal(int a,int b)
+    public int Cal(int a,int b)
     {
         return 0;
     }
 }
-    class add extends calc
+    class Add extends Calc
     {
-        public int cal(int a, int b) {
+        @Override
+        public int Cal(int a, int b) {
             return a+b;
         }
     }
-    class sub extends calc
+    class Sub extends Calc
     {
-        public int cal(int a,int b) {
+        @Override
+        public int Cal(int a,int b) {
             return a-b;
         }
     }
-    class mul extends calc
+    class Mul extends Calc
     {
-        public int cal(int a,int b) {
+        @Override
+        public int Cal(int a,int b) {
             return a*b;
         }
     }
-    class div extends calc
+    class Div extends Calc
     {
-        public int cal(int a,int b) {
+        @Override
+        public int Cal(int a,int b) {
             return a%b;
         }
     }
-public class calculator {
+public class Calculator {
     public static void main(String[] args)
     {
         Logger l=Logger.getLogger("kitty");
@@ -62,25 +66,25 @@ public class calculator {
         l.info("4.Division");
         l.info("Enter a choice");
         int ch=sc.nextInt();
-        calc c=null;
+        Calc c=null;
         switch(ch)
         {
             case 1:
-                c=new add();
+                c=new Add();
                 break;
             case 2:
-                c=new sub();
+                c=new Sub();
                 break;
             case 3:
-                c=new mul();
+                c=new Mul();
                 break;
             case 4:
-               c=new div();
+               c=new Div();
                 break;
         }
         c.sett(a,b);
-        calc finalC = c;
-        l.log(Level.INFO,() ->"Result: " + finalC.cal(finalC.get1(), finalC.get2()));
+        Calc finalC = c;
+        l.log(Level.INFO,() ->"Result: " + finalC.Cal(finalC.get1(), finalC.get2()));
         sc.close();
     }
 }
