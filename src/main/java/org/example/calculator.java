@@ -18,10 +18,9 @@ class Calc {
     {
         return b;
     }
-    public int Cal(int a,int b)
+    public bool Cal(int a,int b)
     {
-        final int ca = 0;
-        return ca;
+        return false;
     }
 }
     class Add extends Calc
@@ -83,7 +82,7 @@ public class Calculator {
                c=new Div();
                 break;
             default:
-                System.out.println("required valid input");
+               l.info("required valid input");
         }
         c.sett(a,b);
         Calc finalC = c;
