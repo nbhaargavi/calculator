@@ -20,7 +20,8 @@ class Calc {
     }
     public int Cal(int a,int b)
     {
-        return 0;
+        final int ca = 0;
+        return ca;
     }
 }
     class Add extends Calc
