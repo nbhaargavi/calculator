@@ -82,6 +82,8 @@ public class Calculator {
             case 4:
                c=new Div();
                 break;
+            default:
+                System.out.println("required valid input");
         }
         c.sett(a,b);
         Calc finalC = c;
