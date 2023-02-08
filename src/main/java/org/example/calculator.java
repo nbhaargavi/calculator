@@ -18,9 +18,9 @@ class Calc {
     {
         return b;
     }
-    public bool Cal(int a,int b)
+    public int Cal(int a,int b)
     {
-        return false;
+        return 0;
     }
 }
     class Add extends Calc
