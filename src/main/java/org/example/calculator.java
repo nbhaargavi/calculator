@@ -2,7 +2,7 @@ package org.example;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
-class Calc {
+abstract class Calc {
     int a;
     int b;
     public void sett(int a,int b)
