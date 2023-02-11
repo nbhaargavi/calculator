@@ -2,7 +2,8 @@ package org.example;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
-abstract class Calc {
+class Calc {
+    Logger l=Logger.getLogger("kitty");
     int a;
     int b;
     public void sett(int a,int b)
@@ -18,36 +19,37 @@ abstract class Calc {
     {
         return b;
     }
-    public int Cal(int a,int b)
+    int Cal(int a,int b)
     {
+        l.info("c");
         return 0;
     }
 }
     class Add extends Calc
     {
         @Override
-        public int Cal(int a, int b) {
+        int Cal(int a, int b) {
             return a+b;
         }
     }
     class Sub extends Calc
     {
         @Override
-        public int Cal(int a,int b) {
+        int Cal(int a,int b) {
             return a-b;
         }
     }
     class Mul extends Calc
     {
         @Override
-        public int Cal(int a,int b) {
+        int Cal(int a,int b) {
             return a*b;
         }
     }
     class Div extends Calc
     {
         @Override
-        public int Cal(int a,int b) {
+        int Cal(int a,int b) {
             return a%b;
         }
     }
@@ -82,11 +84,11 @@ public class Calculator {
                c=new Div();
                 break;
             default:
-               l.info("required valid input");
+                System.out.println("Valid input required ");
         }
         c.sett(a,b);
-        Calc finalC = c;
-        l.log(Level.INFO,() ->"Result: " + finalC.Cal(finalC.get1(), finalC.get2()));
+        Calc C = c;
+        l.log(Level.INFO,() ->"Result: " + C.Cal(C.get1(),C.get2()));
         sc.close();
     }
 }
