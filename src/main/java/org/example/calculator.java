@@ -87,8 +87,8 @@ public class Calculator {
                 l.info("Valid input required ");
         }
         c.sett(a,b);
-        Calc a = c;
-        l.log(Level.INFO,() ->"Result: " + a.cal(a.get1(),a.get2()));
+        Calc k = c;
+        l.log(Level.INFO,() ->"Result: " + k.cal(k.get1(),k.get2()));
         sc.close();
     }
 }
