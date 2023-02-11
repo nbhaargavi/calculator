@@ -19,7 +19,7 @@ class Calc {
     {
         return b;
     }
-    int Cal(int a,int b)
+    int cal(int a,int b)
     {
         l.info("c");
         return 0;
@@ -28,28 +28,28 @@ class Calc {
     class Add extends Calc
     {
         @Override
-        int Cal(int a, int b) {
+        int cal(int a, int b) {
             return a+b;
         }
     }
     class Sub extends Calc
     {
         @Override
-        int Cal(int a,int b) {
+        int cal(int a,int b) {
             return a-b;
         }
     }
     class Mul extends Calc
     {
         @Override
-        int Cal(int a,int b) {
+        int cal(int a,int b) {
             return a*b;
         }
     }
     class Div extends Calc
     {
         @Override
-        int Cal(int a,int b) {
+        int cal(int a,int b) {
             return a%b;
         }
     }
@@ -84,11 +84,11 @@ public class Calculator {
                c=new Div();
                 break;
             default:
-                System.out.println("Valid input required ");
+                l.info("Valid input required ");
         }
         c.sett(a,b);
         Calc C = c;
-        l.log(Level.INFO,() ->"Result: " + C.Cal(C.get1(),C.get2()));
+        l.log(Level.INFO,() ->"Result: " + C.cal(C.get1(),C.get2()));
         sc.close();
     }
 }
