@@ -2,57 +2,7 @@ package org.example;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
-class Calc {
-    Logger l=Logger.getLogger("kitty");
-    int a;
-    int b;
-    public void sett(int a,int b)
-    {
-        this.a=a;
-        this.b=b;
-    }
-    public int get1()
-    {
-        return a;
-    }
-    public int get2()
-    {
-        return b;
-    }
-    int cal(int a,int b)
-    {
-        l.info("c");
-        return 0;
-    }
-}
-    class Add extends Calc
-    {
-        @Override
-        int cal(int a, int b) {
-            return a+b;
-        }
-    }
-    class Sub extends Calc
-    {
-        @Override
-        int cal(int a,int b) {
-            return a-b;
-        }
-    }
-    class Mul extends Calc
-    {
-        @Override
-        int cal(int a,int b) {
-            return a*b;
-        }
-    }
-    class Div extends Calc
-    {
-        @Override
-        int cal(int a,int b) {
-            return a%b;
-        }
-    }
+
 public class Calculator {
     public static void main(String[] args)
     {
