@@ -1,6 +1,8 @@
 package org.example;
 
-abstract class Calc {
+import java.util.logging.Logger;
+
+    abstract class Calc {
         Logger l=Logger.getLogger("kitty");
         private int n1;
         private int n2;
