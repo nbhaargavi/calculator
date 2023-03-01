@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
 
-public class Calculato {
+public class Calculator {
     public static void main(String[] args)
     {
         Logger l=Logger.getLogger("kitty");
