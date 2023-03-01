@@ -12,11 +12,11 @@ import java.util.logging.Logger;
             this.n1=a;
             this.n2=b;
         }
-        int get1()
+        public int get1()
         {
             return n1;
         }
-        int get2()
+        public int get2()
         {
             return n2;
         }
